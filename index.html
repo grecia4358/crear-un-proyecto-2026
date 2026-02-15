@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - Clásico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>SNAKE GAME</h1>
+        
+        <div class="score-container">
+            <div class="score-box">
+                <span class="score-label">Puntuación:</span>
+                <span id="score" class="score-value">0</span>
+            </div>
+            <div class="score-box">
+                <span class="score-label">Récord:</span>
+                <span id="highScore" class="score-value">0</span>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-start">Iniciar Juego</button>
+            <button id="pauseBtn" class="btn btn-pause" disabled>Pausa</button>
+            <button id="resetBtn" class="btn btn-reset">Reiniciar</button>
+        </div>
+
+        <div class="instructions">
+            <h3>Instrucciones:</h3>
+            <p>Usa las flechas del teclado para mover la serpiente</p>
+            <p>Come la comida roja para crecer y ganar puntos</p>
+            <p>¡No choques con las paredes ni contigo mismo!</p>
+        </div>
+
+        <div class="mobile-controls">
+            <button class="mobile-btn" data-direction="UP">↑</button>
+            <div class="mobile-row">
+                <button class="mobile-btn" data-direction="LEFT">←</button>
+                <button class="mobile-btn" data-direction="DOWN">↓</button>
+                <button class="mobile-btn" data-direction="RIGHT">→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2>¡Game Over!</h2>
+            <p>Puntuación final: <span id="finalScore">0</span></p>
+            <p>Récord: <span id="finalHighScore">0</span></p>
+            <button id="playAgainBtn" class="btn btn-start">Jugar de nuevo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

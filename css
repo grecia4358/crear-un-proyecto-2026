@@ -1,0 +1,50 @@
+/* Añade estos estilos al archivo CSS */
+.game-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.option-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option-group label {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.option-group select {
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--primary-color);
+    font-size: 1em;
+    background: white;
+    cursor: pointer;
+}
+
+.option-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+@media screen and (max-width: 480px) {
+    .game-options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .option-group {
+        justify-content: space-between;
+    }
+}
